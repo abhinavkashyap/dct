@@ -14,24 +14,24 @@ FROM_FILE=${DATA_DIR}/"political/republican.test"
 DOM_CLF_FT_MODEL=${DUMP_DIR}/"ftmodels/political_domclf.model"
 SEEDS=(1 2 3 4 5)
 
-for seed in ${SEEDS[@]};
-do
-    python ${PYTHON_FILE} \
-    --from-file ${FROM_FILE} \
-    --to-file ${DUMP_DIR}/"results/political/contra/greedy.1.txt.seed${seed}" \
-    --clf-ft-model-path ${DOM_CLF_FT_MODEL} \
-    --sim-model-file ${SIM_MODEL} \
-    --sim-sentencepiece-model-file ${SIM_SENTENCEPIECE_MODEL} \
-    --cola-roberta-checkpoints-dir ${ROBERTA_BASE_CHECKPOINTS_DIR} \
-    --cola-roberta-json-file ${ROBERTA_BASE_HPARAMS_FILE} \
-    --src-dom-saliency-file ${DATA_DIR}/"political/src_dom.attributes.txt" \
-    --trg-dom-saliency-file ${DATA_DIR}/"political/trg_dom.attributes.txt" \
-    --model-name ${MODEL_NAME} \
-    --gen-method "greedy" \
-    --data-name ${DATA_NAME} \
-    --main-results-csv-filename ${RESULTS_FOLDER}/"main_results.csv" \
-    --constrain-results-csv-filename ${RESULTS_FOLDER}/"constrain_results.csv"
-done
+#for seed in ${SEEDS[@]};
+#do
+#    python ${PYTHON_FILE} \
+#    --from-file ${FROM_FILE} \
+#    --to-file ${DUMP_DIR}/"results/political/contra/greedy.1.txt.seed${seed}" \
+#    --clf-ft-model-path ${DOM_CLF_FT_MODEL} \
+#    --sim-model-file ${SIM_MODEL} \
+#    --sim-sentencepiece-model-file ${SIM_SENTENCEPIECE_MODEL} \
+#    --cola-roberta-checkpoints-dir ${ROBERTA_BASE_CHECKPOINTS_DIR} \
+#    --cola-roberta-json-file ${ROBERTA_BASE_HPARAMS_FILE} \
+#    --src-dom-saliency-file ${DATA_DIR}/"political/src_dom.attributes.txt" \
+#    --trg-dom-saliency-file ${DATA_DIR}/"political/trg_dom.attributes.txt" \
+#    --model-name ${MODEL_NAME} \
+#    --gen-method "greedy" \
+#    --data-name ${DATA_NAME} \
+#    --main-results-csv-filename ${RESULTS_FOLDER}/"main_results.csv" \
+#    --constrain-results-csv-filename ${RESULTS_FOLDER}/"constrain_results.csv"
+#done
 
 for seed in ${SEEDS[@]};
 do

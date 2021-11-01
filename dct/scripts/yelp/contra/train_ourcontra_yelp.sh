@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-PROJECT_DIR="/home/rkashyap/abhi/dct"
-DUMP_DIR="/data3/abhinav/dct/"
+PROJECT_DIR="/home/ubuntu/abhi/dct"
+DUMP_DIR="/abhinav/dct"
 EXP_DIR=${DUMP_DIR}/"experiments"
 DATA_DIR=${DUMP_DIR}/"data"
 LR_GEN=0.001
@@ -34,11 +34,11 @@ NOISE_R=0.1
 GRAD_CLIP_NORM=1.0
 GRAD_LAMBDA=0.01
 PRECISION=32
-SEED=4567
-EXP_NAME="[YELP_OURCONTRA_5]"
+SEED=1234
+EXP_NAME="[YELP_OURCONTRA_2LABELS_4]"
 PYTHON_FILE=${PROJECT_DIR}/"dct/pl_arae_contra_train.py"
 WANDB_PROJECT_NAME="DCT_CONTRA"
-NUM_NEAREST_LABELS=10
+NUM_NEAREST_LABELS=2
 
 
 python ${PYTHON_FILE} \

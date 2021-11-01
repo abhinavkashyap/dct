@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-PROJECT_DIR="/home/rkashyap/abhi/dct"
-DUMP_DIR="/data3/abhinav/dct/"
+PROJECT_DIR="/home/ubuntu/abhi/dct"
+DUMP_DIR="/abhinav/dct"
 DATA_DIR=${DUMP_DIR}/"data"
 PYTHON_FILE=${PROJECT_DIR}/"dct/utils/write_results_table.py"
 ROBERTA_BASE_CHECKPOINTS_DIR=${DUMP_DIR}/"roberta_cola_model/cola_distilroberta-base_25e/checkpoints"
@@ -9,12 +9,12 @@ SIM_MODEL=${DUMP_DIR}/"similarity_models/sim.pt"
 SIM_SENTENCEPIECE_MODEL=${DUMP_DIR}/"similarity_models/sim.sp.30k.model"
 MODEL_NAME="DCT_CONTRA"
 DATA_NAME="YELP"
-RESULTS_FOLDER=${DUMP_DIR}/"results/yelp/clf"
+RESULTS_FOLDER=${DUMP_DIR}/"results/yelp/contra"
 FROM_FILE=${DATA_DIR}/"yelp/sentiment.test.0"
 DOM_CLF_FT_MODEL=${DUMP_DIR}/"ftmodels/yelp_domclf.model"
 SEEDS=(1 2 3 4)
 
-for seed in ${SEEDS[@]};
+for seed in "${SEEDS[@]}";
 do
 python ${PYTHON_FILE} \
 --from-file ${FROM_FILE} \
