@@ -126,3 +126,5 @@ dmypy.json
 .idea
 # used by torchtext
 .vector_cache
+tests/
+dct/scripts
