@@ -127,4 +127,4 @@ dmypy.json
 # used by torchtext
 .vector_cache
 tests/
-dct/scripts
+dct/scripts/
